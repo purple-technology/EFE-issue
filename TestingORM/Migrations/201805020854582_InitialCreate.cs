@@ -13,7 +13,7 @@ namespace TestingORM.Migrations
                     {
                         ServerID = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 40),
-                        Data = c.String(nullable: false, maxLength: 40),
+                        Platform = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ServerID)
                 .Index(t => t.Name, unique: true);
